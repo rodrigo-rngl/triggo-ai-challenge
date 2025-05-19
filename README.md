@@ -9,7 +9,7 @@
 > **Status:** Em andamento 🚧
 
 <h2 align="center">
-<a href=""><u>Clique aqui para visualizar o dashboard do desafio!</u></a>
+<a href="https://triggo-ai-challenge-rodrigo-rngl.streamlit.app/"><u>Clique aqui para visualizar o dashboard do desafio!</u></a>
 </h2>
 
 
