@@ -1,11 +1,14 @@
 import streamlit as st
 import pandas as pd
+from pathlib import Path
+
+data_path = Path(__file__).resolve().parent.parent.parent / "data/clean_general_df.csv.gz"
 
 # Título do dashboard
 st.title("Dashboard: Resultado das Vendas da Olist")
 
 # PREPARAÇÃO DOS DADOS
-df = pd.read_csv("../data/clean_general_df.csv.gz")
+df = pd.read_csv(data_path)
 
 sales_df = df.loc[~df['order_status'].isin(['unavailable', 'canceled'])].copy()
 

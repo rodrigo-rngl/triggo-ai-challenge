@@ -1,12 +1,15 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+from pathlib import Path
+
+data_path = Path(__file__).resolve().parent.parent.parent / "data/clean_general_df.csv.gz"
 
 # Título do dashboard
 st.title("Dashboard: Desempenho de Vendas da Olist")
 
 # PREPARAÇÃO DOS DADOS
-df = pd.read_csv("../data/clean_general_df.csv.gz")
+df = pd.read_csv(data_path)
 
 df['order_delivered_customer_date'] = pd.to_datetime(df['order_delivered_customer_date'], errors='coerce')
 df['order_purchase_timestamp'] = pd.to_datetime(df['order_purchase_timestamp'], errors='coerce')
