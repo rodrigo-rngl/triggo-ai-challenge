@@ -5,7 +5,7 @@ import pandas as pd
 st.title("Dashboard: Resultado das Vendas da Olist")
 
 # PREPARAÇÃO DOS DADOS
-df = pd.read_csv("../data/clean_general_df.csv")  # Exemplo
+df = pd.read_csv("../data/clean_general_df.csv.gz")
 
 sales_df = df.loc[~df['order_status'].isin(['unavailable', 'canceled'])].copy()
 

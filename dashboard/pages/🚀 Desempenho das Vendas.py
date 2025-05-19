@@ -6,7 +6,7 @@ import plotly.express as px
 st.title("Dashboard: Desempenho de Vendas da Olist")
 
 # PREPARAÇÃO DOS DADOS
-df = pd.read_csv("../data/clean_general_df.csv")
+df = pd.read_csv("../data/clean_general_df.csv.gz")
 
 df['order_delivered_customer_date'] = pd.to_datetime(df['order_delivered_customer_date'], errors='coerce')
 df['order_purchase_timestamp'] = pd.to_datetime(df['order_purchase_timestamp'], errors='coerce')
